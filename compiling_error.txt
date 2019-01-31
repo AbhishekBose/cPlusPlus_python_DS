@@ -1,0 +1,54 @@
+/home/abhishek/Desktop/c++/deduplicate.cpp: In function ‘void distinct(std::vector<std::__cxx11::basic_string<char> >&)’:
+/home/abhishek/Desktop/c++/deduplicate.cpp:12:19: error: ‘begin’ was not declared in this scope
+     sort(begin(vec), end(vec));
+                   ^
+/home/abhishek/Desktop/c++/deduplicate.cpp:12:29: error: ‘end’ was not declared in this scope
+     sort(begin(vec), end(vec));
+                             ^
+/home/abhishek/Desktop/c++/deduplicate.cpp:17:10: error: ‘end_unique’ does not name a type
+     auto end_unique = unique(begin(vec), end(vec));
+          ^
+/home/abhishek/Desktop/c++/deduplicate.cpp:19:15: error: ‘end_unique’ was not declared in this scope
+     vec.erase(end_unique, end(vec));
+               ^
+/home/abhishek/Desktop/c++/deduplicate.cpp: In function ‘int main(int, const char**)’:
+/home/abhishek/Desktop/c++/deduplicate.cpp:24:26: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11
+     vector<string> words {"car", "apple", "box", "car", "apple", "foo"};
+                          ^
+/home/abhishek/Desktop/c++/deduplicate.cpp:24:71: error: in C++98 ‘words’ must be initialized by constructor, not by ‘{...}’
+     vector<string> words {"car", "apple", "box", "car", "apple", "foo"};
+                                                                       ^
+/home/abhishek/Desktop/c++/deduplicate.cpp:24:71: error: no matching function for call to ‘std::vector<std::__cxx11::basic_string<char> >::vector(<brace-enclosed initializer list>)’
+In file included from /usr/include/c++/5/vector:64:0,
+                 from /home/abhishek/Desktop/c++/deduplicate.cpp:2:
+/usr/include/c++/5/bits/stl_vector.h:407:9: note: candidate: template<class _InputIterator> std::vector<_Tp, _Alloc>::vector(_InputIterator, _InputIterator, const allocator_type&)
+         vector(_InputIterator __first, _InputIterator __last,
+         ^
+/usr/include/c++/5/bits/stl_vector.h:407:9: note:   template argument deduction/substitution failed:
+/home/abhishek/Desktop/c++/deduplicate.cpp:24:71: note:   cannot convert ‘"box"’ (type ‘const char [4]’) to type ‘const allocator_type& {aka const std::allocator<std::__cxx11::basic_string<char> >&}’
+     vector<string> words {"car", "apple", "box", "car", "apple", "foo"};
+                                                                       ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from /home/abhishek/Desktop/c++/deduplicate.cpp:2:
+/usr/include/c++/5/bits/stl_vector.h:318:7: note: candidate: std::vector<_Tp, _Alloc>::vector(const std::vector<_Tp, _Alloc>&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >]
+       vector(const vector& __x)
+       ^
+/usr/include/c++/5/bits/stl_vector.h:318:7: note:   candidate expects 1 argument, 6 provided
+/usr/include/c++/5/bits/stl_vector.h:303:7: note: candidate: std::vector<_Tp, _Alloc>::vector(std::vector<_Tp, _Alloc>::size_type, const value_type&, const allocator_type&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; std::vector<_Tp, _Alloc>::size_type = long unsigned int; std::vector<_Tp, _Alloc>::value_type = std::__cxx11::basic_string<char>; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::__cxx11::basic_string<char> >]
+       vector(size_type __n, const value_type& __value = value_type(),
+       ^
+/usr/include/c++/5/bits/stl_vector.h:303:7: note:   candidate expects 3 arguments, 6 provided
+/usr/include/c++/5/bits/stl_vector.h:264:7: note: candidate: std::vector<_Tp, _Alloc>::vector(const allocator_type&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; std::vector<_Tp, _Alloc>::allocator_type = std::allocator<std::__cxx11::basic_string<char> >]
+       vector(const allocator_type& __a) _GLIBCXX_NOEXCEPT
+       ^
+/usr/include/c++/5/bits/stl_vector.h:264:7: note:   candidate expects 1 argument, 6 provided
+/usr/include/c++/5/bits/stl_vector.h:253:7: note: candidate: std::vector<_Tp, _Alloc>::vector() [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >]
+       vector()
+       ^
+/usr/include/c++/5/bits/stl_vector.h:253:7: note:   candidate expects 0 arguments, 6 provided
+/home/abhishek/Desktop/c++/deduplicate.cpp:28:22: error: ISO C++ forbids declaration of ‘word’ with no type [-fpermissive]
+     for (const auto& word : words) {
+                      ^
+/home/abhishek/Desktop/c++/deduplicate.cpp:28:29: warning: range-based ‘for’ loops only available with -std=c++11 or -std=gnu++11
+     for (const auto& word : words) {
+                             ^

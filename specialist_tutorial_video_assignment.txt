@@ -1,0 +1,27 @@
+//Specialist tutorial pseudocode
+
+1.> Function getTrainingVideoArrayForSpecilaist():
+    ->if (checkIfSpecialistTutorialVideoMappingExist):
+        -> violationIDs = Function 2 ()
+    else:
+        violation IDs = Function 3 ()
+
+
+2.> Function getSpecialistTutorialVideoInstancesMapped()
+        -> Get violation id from specialist training offence mapping where specialist id and offence type id and training should
+            not be completed.
+
+3. GetVideoInstances():
+    -> If recieved violation id count = 0 :
+        -> It's a new user traininig for the first time
+            ->Get distinct video Ids from specialist training dataset where cat_id = 'x' offence_IDs in (id1,id2,id3) and (id4,id5)
+    -> else it's an existing user.
+        -> Get distinct video Ids from specialist training dataset where offence_IDs in (id1,id2,id3) and (id4,id5) and not 
+            in attempted_videos.
+    -> If number of videos returned is less than 4:
+        getViolationIDsWithoutExclusion():
+            -> Get distinct video Ids from specialist training dataset where cat_id = 'x' offence_IDs in (id1,id2,id3) and (id4,id5)
+
+        
+    
+    
